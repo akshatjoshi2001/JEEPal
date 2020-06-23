@@ -49,4 +49,5 @@ def chat(sentence):
 def index():
     sent = request.args.get("q")
     return chat(sent)
+
 app.run()

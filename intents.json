@@ -1,0 +1,83 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up","sup","hey"],
+         "responses": ["Hello! Hope you are fine.", "Hi! I can solve your JEE queries.", "Hi there! Type in your IITJEE queries."]
+        
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day","Bye bye"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
+        
+        },
+{"tag": "physics",
+         "patterns": ["How do I study physics?","How to solve JEE physics?","Please help me with physics","Physics"],
+         "responses": ["To study physics refer HCV, Irodov or Bansal Sheets"]
+         
+        },
+{"tag": "chemistry",
+         "patterns": ["How do I study chemistry?","How to solve JEE chemistry?","Please help me with chemistry","Chemistry"],
+         "responses": ["Solve Narendra Awasthi for Physical, MS Chauhan for Organic and VK Jaiswal for Inorganic"]
+         
+        },
+{"tag": "maths",
+         "patterns": ["How do I study maths?","How to solve JEE maths?","Please help me with maths","Maths","mathematics"],
+         "responses": ["Solve Cengage by G Tewani"]
+         
+        },
+{"tag": "age",
+         "patterns": ["What is your Age?","How old are you?","Are you older than me?","How long have you lived?","age"],
+         "responses": ["I am ageless :), after all I am a bot."]
+         
+        },
+{"tag": "name",
+         "patterns": ["What is your Name?","Your name?","Who are you?","whats your name?","name please?"],
+         "responses": ["I am JEEPal! Your friend which will help you crack IIT JEE. Ask me anything. By the way, I was created by Akshat. "]
+         
+        },
+{"tag": "best iits",
+         "patterns": ["Which IIT is the best?","best IIT?","Is this the best IIT?","best IIT?","tell me the best IIT"],
+         "responses": ["IITs are all good. Most people want Bombay. Some feel Madras is the best. (NIRF rank 1). Some feel Delhi is great. "]
+         
+        },
+{"tag": "bits",
+         "patterns": ["BITS Pilani","is bits better than iit?","how is bits?","is bits worthwhile"],
+         "responses": ["Don't go to BITS unless you wan't to be trolled in IIM (Indian Institute of Memology). Just Jk. BITS is great, if you aren't getting your desired branch in IIT."]
+        },
+{"tag": "branchchange",
+         "patterns": ["How to change branch at IIT?","Is branch change possible?","is depc possible?","is bc possible?"],
+         "responses": ["Hmmm. So you want to change your branch? Refer to this answer by my creator:  https://qr.ae/TJiMxE"]
+        },
+{"tag": "talk",
+         "patterns": ["I want to talk to your creator?","talk to iitian","talk to akshat","I have lots of queries. Please help."],
+         "responses": ["Wanna talk to Akshat? Just drop him a mail at akshatjoshi@smail.iitm.ac.in :) He will be more than happy to help."]
+        },
+{"tag": "branch",
+         "patterns": ["Which branch is the best?","Is CSE the best branch?"],
+         "responses": ["All branches are good. If you are deeply interested in CSE then go for it."]
+         
+        },
+{"tag": "air",
+         "patterns": ["How to get under 50 AIR?","how to improve AIR?"],
+         "responses": ["Rank is something completely unpredicatble. Just give your best shot."]
+         
+        },
+{"tag": "joke",
+         "patterns": ["tell me a joke","tell me something funny"],
+         "responses": ["I will tell you the best joke: BITS is better than IIT."]
+         
+        },
+{"tag": "motive",
+         "patterns": ["motivate me","inspire me"],
+         "responses": ["Watch Sandeep Maheshwari to get inspired. :D"]
+         
+        },
+
+{"tag": "creator",
+         "patterns": ["Who is your creator?","Who created you?","Have you been created by anyone?","who invented you?"],
+         "responses": ["I was created by Akshat Joshi. Visit him on akshatweb.in"]
+         
+        }
+
+        
+   ]
+}

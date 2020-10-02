@@ -8,10 +8,13 @@ import random
 import json
 from flask import Flask
 from flask import request
-
+from flask_cors import CORS
 with open("intents.json") as file:
     data = json.load(file)
 tags = []
+from nltk.corpus import stopwords 
+stop_words = set(stopwords.words('english')) 
+
 responses = {}
 words = []
 docs_x = []
@@ -20,18 +23,26 @@ for intent in data['intents']:
     tags.append(intent['tag'])
     responses[intent['tag']]=intent['responses'][0]
     for pattern in intent['patterns']:
-        wrds = nltk.word_tokenize(pattern)
-    
+        
+        wrds1 = nltk.word_tokenize(pattern)
+        wrds = []
+        for w in wrds1:
+            if w not in stop_words:
+                wrds.append(w)
         docs_x.append(wrds)
         docs_y.append(intent['tag'])
         words.extend(wrds)
         
+        
+            
+    
 
 model = keras.models.load_model("chatbot.h5")
             
 words = sorted(list(set([stemmer.stem(w.lower()) for w in words])))
 tags = sorted(tags)
 app = Flask(__name__)
+CORS(app)
 
 def chat(sentence):
     
@@ -43,11 +54,16 @@ def chat(sentence):
             inp.append(1)
         else:
             inp.append(0)
-    
-    return responses[tags[model.predict([inp]).argmax()]]
+    cls = model.predict([inp]).argmax()
+    prob = np.max(model.predict([inp]))
+    if(prob>=0.5):
+        return responses[tags[cls]]
+    else:
+        return "Sorry. I didn't understand, what you wanted. I really strive to improve daily. If you have a serious doubt, you can mail Akshat at akshatjoshi@smail.iitm.ac.in"
 @app.route('/chat')
 def index():
     sent = request.args.get("q")
     return chat(sent)
 
-app.run()
+    
+app.run(host='::',port = 80)

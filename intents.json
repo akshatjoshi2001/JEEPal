@@ -71,6 +71,18 @@
          "responses": ["Watch Sandeep Maheshwari to get inspired. :D"]
          
         },
+{"tag": "chances",
+         "patterns": ["what are my chances being from general category","general category mein hun","iit mein hoga kya mera?"],
+         "responses": ["Chances of getting into IIT from general category: VERY LESS. But don't loose hope! Keep working hard"]
+         
+        },
+{"tag": "happen",
+         "patterns": ["will jee happen this year?","is jee goinf to happen due to coronavirus?","corona","coronavirus"],
+         "responses": ["Corona has caused a lot of problem. Don't worry, JEE will happen some time or the other. Keep studying."]
+         
+        },
+
+
 
 {"tag": "creator",
          "patterns": ["Who is your creator?","Who created you?","Have you been created by anyone?","who invented you?"],
